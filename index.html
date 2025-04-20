@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>TODO AND STUDENTS CRUD</title>
+<style>
+  i {
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+   <section class="mb-5">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="todoform">
+                            <div class="form-group">
+                                <label for="todoinput">Add TODO</label>
+                                <input type="text" id="todoinput" class="form-control" required></div>
+                                <button type="submit" class="btn btn-outline-primary" id="addtodobtn">Add TODO</button>
+                                <button type="button" class="btn btn-outline-primary d-none" id="updatetodobtn">Update TODO</button>
+                        </form>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="col-6">
+                <div class="card-body">
+                   <ul id="todocontainer" class="list-group">
+                   
+                </ul> 
+                <p class="alert alert-warning d-none" id="alertmsg">NO TODO ADDED YET!</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   </section>
+
+   <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <form id="stdform">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="fname">Fname</label>
+                                <input type="text" required class="form-control" id="fname">
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Lname</label>
+                                <input type="text" required class="form-control" id="lname">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact</label>
+                                <input type="text" required class="form-control" id="contact">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" required class="form-control" id="email">
+                            </div>
+                            <button type="submit" class="btn btn-outline-info" id="addstdbtn">Add Student</button>
+                            <button type="button" class="btn btn-outline-info d-none" id="updatestdbtn">Update Student</button>
+
+                          </div>
+                    </div>
+                </form>
+               
+            </div>
+            <div class="col-md-8">
+<table class="table table-bordered" id="stdtable">
+    <thead>
+        <tr>
+            <th>Sr.NO.</th>
+            <th>Fname</th>
+            <th>Lname</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>remove</th>
+        </tr>
+    </thead>
+    <tbody id="stdcontainer">
+        <!-- <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><i class="fas fa-edit fa-2x text-info mx-2" onclick="onstdedit(thisthis)"></i></td>
+            <td> <i class="fas fa-trash fa-2x text-danger mx-2" onclick="onstdremove(thisthis)"></i></td>
+        </tr> -->
+    </tbody>
+   
+</table>
+<p class="alert alert-warning d-none" id="stdalert"> No Student Added Yet !</p>
+            </div>
+        </div>
+    </div>
+   </section>
+
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.18.0/dist/sweetalert2.all.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
